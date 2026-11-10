@@ -29,6 +29,9 @@
         "webpack": "^5.64.1",
         "webpack-cli": "^5.1.4"
     },
+    "overrides": {
+        "decompress": "npm:@xhmikosr/decompress"
+    },
     "scripts": {
         "watch": "webpack --progress --watch --mode development",
         "build": "cross-env NODE_ENV=production webpack --progress --mode production"
