@@ -138,7 +138,7 @@ class DynamicUpdate implements Interfaces\Controller {
 
         $enviroments = [
             'https://liikunta.client-hkih.test'       => REVALIDATE_TOKEN_TESTING,
-            'https://liikunta.hkih.stage.geniem.io'   => REVALIDATE_TOKEN_TESTING,
+            'https://liikunta2-headless.dev.hel.ninja'   => REVALIDATE_TOKEN_TESTING,
             'https://liikunta.content.api.hel.fi'     => REVALIDATE_TOKEN_PRODUCTION_LIIKUNTA,
             'https://liikunta2.content.api.hel.fi'    => REVALIDATE_TOKEN_PRODUCTION_LIIKUNTA,
             'https://tapahtumat.client-hkih.test'     => REVALIDATE_TOKEN_TESTING,
