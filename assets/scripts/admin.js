@@ -1,5 +1,5 @@
 ( function( $ ) {
-    const { adminajax } = adminData; // eslint-disable-line
+    const { adminajax } = adminData; // eslint-disable-line no-var
 
     $( 'body' ).on( 'click', '.editor-preview-dropdown__toggle', function() {
         // hide preview dropdown
