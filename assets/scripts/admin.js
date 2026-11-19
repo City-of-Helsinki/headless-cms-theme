@@ -1,5 +1,5 @@
 ( function( $ ) {
-    const { adminajax } = adminData; // eslint-disable-line
+    const { adminajax } = adminData; // eslint-disable-line no-var
 
     $( 'body' ).on( 'click', '.editor-preview-dropdown__toggle', function() {
         // hide preview dropdown
@@ -18,11 +18,17 @@
                 }
 
                 if ( ! response.success ) {
-                    const error = `<div class="components-notice-list">
-                        <div class="components-notice is-error">
-                            <div class="components-notice__content">${ response.data }</div>
-                        </div>
-                    </div>`;
+                    const error = $('<div>', {
+                        class: 'components-notice-list'
+                    }).append(
+                        $('<div>', {
+                            class: 'components-notice is-error'
+                        }).append(
+                            $('<div>', {
+                                class: 'components-notice__content'
+                            }).text(response.data)
+                        )
+                    );
 
                     $( '.interface-interface-skeleton__content' ).prepend( error );
                 }
